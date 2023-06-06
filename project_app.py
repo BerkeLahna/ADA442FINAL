@@ -38,7 +38,7 @@ def main():
             'pdays': st.slider("Enter number of days that passed after the client was last contacted from a previous campaign:", min_value=0, max_value=1000, value=0, key='pdays'),
             'previous': st.slider("Enter number of contacts performed before this campaign for this client:", min_value=0, max_value=10, value=0, key='previous'),
             'poutcome': st.selectbox("Outcome of the previous marketing campaign:", ['failure', 'success', 'nonexistent']),
-            'emp.var.rate': st.slider("Enter employment variation rate:", min_value=-5.0, max_value=5.0, value=0.0, step=0.1, key='emp.var.rate'),
+            'emp.var.rate': st.slider("Enter employment variation rate:", min_value=-5.0, max_value=5.0, value=0.0, step=0.01, key='emp.var.rate'),
             'cons.price.idx': st.slider("Enter consumer price index:", min_value=0.0, max_value=105.0, value=0.0, step=0.1, key='cons.price.idx'),
             'cons.conf.idx': st.slider("Enter consumer confidence index:", min_value=-100.0, max_value=100.0, value=0.0, step=0.1, key='cons.conf.idx'),    
             'euribor3m': st.slider("Enter euribor 3 month rate:", min_value=0.0, max_value=7.0, value=0.0, step=0.001, key='euribor3m'),
@@ -61,8 +61,8 @@ def main():
         st.button("-1", on_click=minus, args=(1, 'previous'),key = "previous_rem_1")
         for i in range(6):
            st.write("")
-        st.button("+1", on_click=plus, args=(1, 'emp.var.rate'),key = "emp.var.rate_add_1")
-        st.button("-1", on_click=minus, args=(1, 'emp.var.rate'),key = "emp.var.rate_rem_1")
+        st.button("+0.01", on_click=plus, args=(0.01, 'emp.var.rate'),key = "emp.var.rate_add_1")
+        st.button("-0.01", on_click=minus, args=(0.01, 'emp.var.rate'),key = "emp.var.rate_rem_1")
         st.button("+0.01", on_click=plus, args=(0.01, 'cons.price.idx'),key = "cons.price.idx_add_1")
         st.button("-0.01", on_click=minus, args=(0.01, 'cons.price.idx'),key = "cons.price.idx_rem_1")
         st.button("+0.1", on_click=plus, args=(0.1, 'cons.conf.idx'),key = "cons.conf.idx_add_1")
@@ -75,8 +75,8 @@ def main():
 
     with col3:
         st.write("")
-        st.button("+5", on_click=plus, args=(5, 'age'), key="add_one_5")
-        st.button("-5", on_click=minus, args=(5, 'age'), key="remove_one_5")
+        st.button("+0.05", on_click=plus, args=(0.05, 'age'), key="add_one_5")
+        st.button("-0.05", on_click=minus, args=(0.05, 'age'), key="remove_one_5")
         for i in range(49):
            st.write("")
         st.button("+5", on_click=plus, args=(5, 'duration'),key = "dur_add_5")
