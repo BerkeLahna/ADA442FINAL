@@ -121,7 +121,7 @@ def perform_classification(input_data):
     prediction = model.predict(X)
 
     # Map the predicted values to text labels and colors
-    label_map = {0: ("You are not elligible for a term deposit", "rgba(255, 0, 0, 0.5)"), 1: ("You are elligible for a term deposit", "rgba(0, 255, 0, 0.5)")}
+    label_map = {0: ("You are not eligible for a term deposit", "rgba(255, 0, 0, 0.5)"), 1: ("You are eligible for a term deposit", "rgba(0, 255, 0, 0.5)")}
     prediction_label, prediction_color = label_map[prediction[0]]
 
     # Display the text box with colored background
