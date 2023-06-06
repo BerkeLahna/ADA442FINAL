@@ -75,8 +75,8 @@ def main():
 
     with col3:
         st.write("")
-        st.button("+0.05", on_click=plus, args=(0.05, 'age'), key="add_one_5")
-        st.button("-0.05", on_click=minus, args=(0.05, 'age'), key="remove_one_5")
+        st.button("+5", on_click=plus, args=(5, 'age'), key="add_one_5")
+        st.button("-5", on_click=minus, args=(5, 'age'), key="remove_one_5")
         for i in range(49):
            st.write("")
         st.button("+5", on_click=plus, args=(5, 'duration'),key = "dur_add_5")
@@ -90,8 +90,8 @@ def main():
         st.button("-5", on_click=minus, args=(5, 'previous'),key = "previous_rem_5")
         for i in range(6):
            st.write("")
-        st.button("+5", on_click=plus, args=(5, 'emp.var.rate'),key = "emp.var.rate_add_5")
-        st.button("-5", on_click=minus, args=(5, 'emp.var.rate'),key = "emp.var.rate_rem_5")
+        st.button("+0.05", on_click=plus, args=(0.05, 'emp.var.rate'),key = "emp.var.rate_add_5")
+        st.button("-0.05", on_click=minus, args=(0.05, 'emp.var.rate'),key = "emp.var.rate_rem_5")
         st.button("+0.1", on_click=plus, args=(0.1, 'cons.price.idx'),key = "cons.price.idx_add_5")
         st.button("-0.1", on_click=minus, args=(0.1, 'cons.price.idx'),key = "cons.price.idx_rem_5")
         st.button("+1", on_click=plus, args=(1, 'cons.conf.idx'),key = "cons.conf.idx_add_5")
